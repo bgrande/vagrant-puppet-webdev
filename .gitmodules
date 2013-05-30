@@ -1,0 +1,24 @@
+[submodule "puppet/modules/git"]
+	path = puppet/modules/git
+	url = https://github.com/puppetlabs/puppetlabs-git
+[submodule "puppet/modules/apache"]
+	path = puppet/modules/apache
+	url = https://github.com/puppetlabs/puppetlabs-apache
+[submodule "puppet/modules/apt"]
+	path = puppet/modules/apt
+	url = https://github.com/puppetlabs/puppetlabs-apt
+[submodule "puppet/modules/mysql"]
+	path = puppet/modules/mysql
+	url = https://github.com/puppetlabs/puppetlabs-mysql
+[submodule "puppet/modules/nginx"]
+	path = puppet/modules/nginx
+	url = https://github.com/puppetlabs/puppetlabs-nginx
+[submodule "puppet/modules/pear"]
+	path = puppet/modules/pear
+	url = https://github.com/treehouseagency/puppet-pear
+[submodule "puppet/modules/php"]
+	path = puppet/modules/php
+	url = https://github.com/Mayflower/puppet-php
+[submodule "puppet/modules/stdlib"]
+	path = puppet/modules/stdlib
+	url = https://github.com/puppetlabs/puppetlabs-stdlib
