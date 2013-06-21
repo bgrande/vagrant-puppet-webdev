@@ -5,21 +5,6 @@
 ip = "192.168.0.100"
 puts "Hostonly IP #{ip}"
 
-def shared_workspace
-    share_file_name = '.shared_folder'
-    share_file_name = File.join(File.dirname(__FILE__), share_file_name)
-
-    unless File.exists?(share_file_name)
-        puts "ERROR: please set up a '#{share_file_name}' file containing the path to your images folder"
-        exit
-    end
-
-    shared_workspace_path = File.read(share_file_name).strip
-    puts "Mounting images from: #{shared_workspace_path}"
-
-   return shared_workspace_path
-end
-
 Vagrant::Config.run do |config|
     config.vm.box = "precise64"
     config.vm.box_url = "http://files.vagrantup.com/precise64.box"

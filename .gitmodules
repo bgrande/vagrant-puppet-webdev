@@ -25,3 +25,12 @@
 [submodule "puppet/modules/nodejs"]
 	path = puppet/modules/nodejs
 	url = https://github.com/puppetlabs/puppetlabs-nodejs
+[submodule "puppet/modules/mongodb"]
+	path = puppet/modules/mongodb
+	url = https://github.com/puppetlabs/puppetlabs-mongodb
+[submodule "puppet/modules/java"]
+	path = puppet/modules/java
+	url = https://github.com/puppetlabs/puppetlabs-java
+[submodule "puppet/modules/sqlite"]
+	path = puppet/modules/sqlite
+	url = https://github.com/puppetlabs/puppetlabs-sqlite.git
