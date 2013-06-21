@@ -1,0 +1,15 @@
+global_default_nkb:5MB
+check_mail:0
+tab_stop:4
+
+
+# php error log
+colorscheme:php_error:PHP Errors
+cs_re:blue:^\[..-...-.... ..:..:..\]
+cs_re:green,,bold:\*MSG\*:
+cs_re:white,red:PHP (Notice|Warning):
+cs_re:white,red,blink:PHP Fatal error:
+cs_re_s:red,,bold:PHP (Notice|Warning|Fatal error): (.*)\sin\s
+cs_re_s:yellow:\sin\s(.*)\son\sline\s([0-9]*)
+
+cs_re:magenta:SAPAccounting.*$
