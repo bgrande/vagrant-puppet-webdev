@@ -11,15 +11,17 @@ class { 'apt':
   always_apt_update => true
 }
 
-class {'apache::mod::php': }
+# enable mod php - not working yet
+# class {'apache::mod::php': }
 
+# enable example virtual host
 apache::vhost { 'testproject.dev':
 	priority	=> '10',
 	vhost_name	=> '192.168.0.100',
 	port		=> '80',
-	docroot		=> '/var/www/testproject.dev/htdocs/',
-	logroot		=> '/var/www/testproject.dev/logs/',
+	docroot		=> '/var/www/webapps/testproject.dev',
+	docroot_owner => 'www-data',
+    docroot_group => 'www-data',
 	serveradmin	=> 'webmaster@testproject.dev',
 	serveraliases	=> ['www.testproject.dev'],
-} 	
-#include apachelocal
+}
