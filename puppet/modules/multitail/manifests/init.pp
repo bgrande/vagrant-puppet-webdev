@@ -1,4 +1,4 @@
-# TODO: doku
+# Make sure multitail is installed and set custom rc file for vagrant user
 class multitail {
   package {
     "multitail":
@@ -6,11 +6,11 @@ class multitail {
   }
 
   file {
-    "/home/user/.multitailrc":
+    "/home/vagrant/.multitailrc":
         ensure => file,
         source => "puppet:///modules/multitail/.multitailrc",
-        owner => 'user',
-        group => 'user',
+        owner => 'vagrant',
+        group => 'vagrant',
         mode => 644,
         require => Package["multitail"],
   }

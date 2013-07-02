@@ -1,4 +1,4 @@
-#TODO: doku
+# Make sure vim is installed and set custom rc file
 class vim {
   package {
     "vim":
@@ -6,11 +6,11 @@ class vim {
   }
 
   file {
-    "/home/user/.vimrc":
+    "/home/vagrant/.vimrc":
         ensure => file,
         source => "puppet:///modules/vim/.vimrc",
-        owner => 'user',
-        group => 'user',
+        owner => 'vagrant',
+        group => 'vagrant',
         mode => 644,
   }
 }

@@ -39,7 +39,7 @@ set laststatus=2
 
 "set the kind of invisible characters to show
 " for tabs, trailing spaces, non breaking spaces
-set lcs=tab:>.,trail:•,nbsp:%
+"set lcs=tab:>.,trail:•,nbsp:%
 
 "show invisible characters. Use "set nolist" to turn off.
 set list

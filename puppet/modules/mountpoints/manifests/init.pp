@@ -1,25 +1,6 @@
 class mountpoints {
     file {
-        'www dir':
-            ensure => directory,
-            owner => www-data,
-            group => www-data,
-            mode => 644,
-            path => '/var/www',
-    }
-
-    file {
-        'app dir':
-            ensure => directory,
-            owner => www-data,
-            group => www-data,
-            mode => 644,
-            path => '/var/www/app',
-            require => File['www dir'],
-    }
-
-    file {
-        '/mnt/application':
+        '/mnt/applications':
             ensure => directory,
             owner => www-data,
             group => www-data,
@@ -27,25 +8,25 @@ class mountpoints {
     }
 
     mount {
-        'mount application':
+        'mount application dir':
             ensure => mounted,
-            name => '/mnt/application',
+            name => '/mnt/applications',
             atboot => false,
-            device => 'v-root',
-            fstype => 'vboxsf',
-            options => 'defaults,uid=www-data,gid=www-data',
-            require => File['/mnt/application'],
-
-    }
-
-    mount {
-        'mount www':
-            ensure => mounted,
-            name => '/var/www/app',
-            atboot => false,
-            device => '/mnt/application/htdocs',
+            device => '/vagrant/projects',
             fstype => 'auto',
             options => 'bind',
-            require => [File['app dir'], Mount['mount application']],
+            require => File['/mnt/applications'],
+    }
+
+# TODO use vhosts for different projects instead! => use puppet apache module configuration! 
+    mount {
+        'mount testproject':
+            ensure => mounted,
+            name => '/var/www/testproject.dev',
+            atboot => false,
+            device => '/mnt/application/testproject.dev',
+            fstype => 'auto',
+            options => 'bind',
+            require => Mount['mount application dir']],
     }
 }
