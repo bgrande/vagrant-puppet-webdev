@@ -30,7 +30,7 @@ vagrant 1.1.0 (64) - standalone with Ubuntu 12.04
 
 ## Not successful
 vagrant 1.2.2 (64) - standalone with Ubuntu 12.04 
-                   - guest OS (auto-) detection broken
+                   - guest OS (auto-) detection seems to be broken
 
 ## Usage:
 
