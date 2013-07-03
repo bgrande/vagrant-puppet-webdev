@@ -19,6 +19,7 @@ A vagrant based web development machine for multiproject usage
  - ocr
  - optipng
  - vim
+ 
 Later:
  - (java)
  - (nginx) 
@@ -50,6 +51,7 @@ try http://192.168.0.100 in your preferred browser
  - mysql
  - sqlite
  - nodejs
+ 
 Later:
  - (nginx)
  - (java)
