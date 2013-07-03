@@ -14,7 +14,6 @@ Vagrant.configure("2") do |config|
     config.vm.hostname = "projects.dev"
 
     config.vm.network :private_network, ip: ip
-    #, :adpater => 2
 
     config.ssh.forward_agent = true
     config.ssh.forward_x11 = false
@@ -27,7 +26,7 @@ Vagrant.configure("2") do |config|
         v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
         v.customize ["modifyvm", :id, "--memory", 1024]
         v.customize ["modifyvm", :id, "--cpus", 2]
-        v.customize ["modifyvm", :id, "--rtcuseutc", "on"] #see: https://github.com/mitchellh/vagrant/issues/391#issuecomment-5834770
+        v.customize ["modifyvm", :id, "--rtcuseutc", "on"]
         v.customize ["modifyvm", :id, "--cpuhotplug", "on"]
         v.customize ["modifyvm", :id, "--ioapic", "on"]
     end

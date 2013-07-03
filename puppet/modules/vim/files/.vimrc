@@ -1,4 +1,5 @@
-" http://github.com/faithfulgeek/dotfiles/blob/master/.vimrc
+
+" formerly found at http://github.com/faithfulgeek/dotfiles/blob/master/.vimrc
 
 set nocompatible              "don't need to keep compatibility with Vi
 set background=dark           "make vim use colors that look good on a dark background

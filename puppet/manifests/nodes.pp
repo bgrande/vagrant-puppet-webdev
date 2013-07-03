@@ -14,7 +14,8 @@ node /^\w*dev\w*$/, 'dev', default {
   	optipng,
   	ocr,
   	ant,
-  	apache
+  	apache,
+  	imagemagick
   	#nginx,
   	#xdebug,
   	#sasscompass,
